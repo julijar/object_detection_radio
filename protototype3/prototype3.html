@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prototype 3</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- this link is supposed to fix the "io undefined" error but dk what it does -->
+    <!-- It loads the javascript file. defer makes the browser load it when everything else (html, css) has loaded -->
+    <!-- <script src="http://localhost:3000/app.js" defer></script> -->
+
+    <!-- Import TensorFlow.js library -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"
+      defer
+    ></script>
+
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"
+      defer
+    ></script>
+
+    <!-- Load the socket library to get rid of io() problems -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"
+      defer
+    ></script>
+
+    <!-- Load the client side app -->
+    <script src="http://localhost:3000/client.js" defer></script>
+
+    <link rel="stylesheet" href="http://localhost:3000/style.css" />
+  </head>
+
+  <body>
+    <div class="section group">
+      <div class="col span_1_of_4">
+
+        <section id="demos" class="invisible">
+          <div id="liveView" class="camView">
+            <button id="webcamButton">Enable Webcam</button>
+
+            <audio id="plantSound1" src="http://localhost:3000/plant1_edtijo__happy-8bit-pixel-adenture.wav"></audio>
+          <audio id="plantSound2" src="http://localhost:3000/plant2__rootsmessenger__rootsmessenger-spiral-loop-111bpm-freesound.wav"></audio>
+          <audio id="plantSound3" src="http://localhost:3000/plant3__adnova__happy-cave.wav"></audio>
+      
+          <audio id="radioStatic1" src="http://localhost:3000/radioStatic1.wav"></audio>
+          <audio id="radioStatic2" src="http://localhost:3000/radioStatic2.wav"></audio>
+          <audio id="radioStatic3" src="http://localhost:3000/radioStatic3.wav"></audio>
+ 
+          
+          
+           <audio id="deepScanning" src="http://localhost:3000/deep-scan.mp3"></audio>
+           <audio id="noise-interference" src="http://localhost:3000/electronic-malfunction-4.wav"></audio>
+           <audio id="person" src="http://localhost:3000/futuristic-tuning.wav"></audio>
+           <audio id="beepScan" src="http://localhost:3000/radar-sonar-scan.wav"></audio>
+                       <video id="webcam" autoplay width="350px" height="350px"></video>
+          </div>
+        </section>
+      </div>
+
+      <div class="col span_2_of_4">
+        
+       
+        <div id="PlantStationsDiv">
+          <div id="stationOne"></div>
+          </div>
+        <div class="sliderDiv" id="PlantSliderDiv">
+            
+          
+         
+          <input   type="range"
+          min="0.00"
+          max="1.00"
+          step="0.01"
+          class="slider"
+          id="PlantSlider">
+
+          
+<div> <p class="sliderText">
+  <span id="value"></span>
+<span id="outputVar"></span>
+ signals found </p>
+</div>
+ 
+
+            
+
+</div>
+
+
+</div>
+   
+
+ 
+
+  
+
+  <div class="col span_2_of_4">
+          
+  <input   type="range"
+  min="0.00"
+  max="1.00"
+  step="0.01"
+  class="slider"
+  id="stabilizingSlider">
+</div> 
+
+     <!-- <button id="updatePredictions" onclick="updatePredictions();">Search for signals</button>-->
+    </div>
+  </body>
+</html>

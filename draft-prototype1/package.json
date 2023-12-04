@@ -1,0 +1,10 @@
+{
+    "name": "basic-socket",
+    "version": "0.0.1",
+    "description": "Communication between Arduino and HTML/JavaScript",
+    "dependencies": {
+        "socket.io": "^2.0.4",
+        "serialport": "^9.0.1",
+        "@tensorflow/tfjs-node": "^1.0.2"
+    }
+}

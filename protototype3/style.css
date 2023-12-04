@@ -1,0 +1,229 @@
+
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  color: #1a1a1a;
+  background-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin-left: 1.5rem;
+}
+
+h1 {
+  font-style: bold;
+  color: #000000;
+}
+
+video {
+  display: block;
+/*  border-radius: 500px; */
+}
+
+section {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.removed {
+  display: none;
+}
+
+.invisible {
+  opacity: 0.2;
+}
+
+.webcam {
+  border-radius:100px; 
+  width:280px;
+  height:280px;
+  
+}
+
+.camView {
+  position: relative;
+  float:left;
+  /*width: calc(100% - 20px); */
+  width:280px;
+   height:280px;
+ /* margin: 10px; */
+  cursor: pointer;
+  border-radius: 100px;
+/*  padding-top: 75px; */
+
+margin-top: 0.5rem;
+margin-right: 1rem;
+
+}
+
+.camView p {
+  position: absolute;
+  padding: 5px;
+  background-color: rgba(0, 68, 255, 0.85);
+  color: #fff;
+  border: 1px dashed rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+  padding-left: 4rem;
+}
+
+.highlighter {
+  background: rgba(19, 224, 19, 0);
+  border: 1px dashed rgb(0, 255, 13);
+  z-index: 1;
+  position: absolute;
+}
+
+#PlantStationsDiv {
+  width: 100%;
+  height: 1px;
+  position: inherit;
+  padding-bottom: 0.5rem;
+ border-top:rgb(0, 0, 0);
+  /*margin-left: 5rem; */
+  margin-left: 3rem;
+
+}
+#stationOne {
+  width: 1px;
+  height: 1px;
+ position: fixed;
+background-color: black;
+  margin-top:0;
+ margin-left:0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+ /* outline: 1px solid black;  */
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-top: 1rem;
+ /* margin-left: 2rem; */
+
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+  
+input[type=range]::-moz-range-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+ /* outline: 1px solid black;  */
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+input[type=range]::-moz-range-thumb {
+  background-color: rgb(255, 255, 255);
+  
+  width: 5px;
+  height: 135px;
+  background: #ff0000;
+  border: none;
+  cursor: pointer;
+} 
+
+
+
+
+.sliderDiv {
+margin-bottom: 6rem;
+margin-top: 2rem;
+margin-left: 5rem;
+background-color: white;
+margin-left: 3rem;
+
+}
+
+.sliderText {
+  text-align: center;
+  margin-left: 3rem;
+  padding-top: 2.5rem;
+}
+
+.button {
+  background-color: #ffffff; /* Green */
+  border: 1 px solid black;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+  padding: 0%;
+}
+.col:first-child {
+  margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 */
+}
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+  width: 100%;
+}
+.span_3_of_4 {
+  width: 74.6%;
+}
+.span_2_of_4 {
+  width: 49.2%;
+}
+.span_1_of_4 {
+  width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+  .span_1_of_4,
+  .span_2_of_4,
+  .span_3_of_4,
+  .span_4_of_4 {
+    width: 100%;
+  }
+}
+
+.push {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+  .push {
+    display: none;
+  }
+}
