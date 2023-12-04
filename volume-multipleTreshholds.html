@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Multiple object detection using pre trained model in TensorFlow.js</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--sound js library-->
+    <script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
+  </head>  
+
+  <body onload="loadSound();">
+    <h1></h1>
+
+   <!--<p>Wait for the model to load before clicking the button to enable the webcam - at which point it will become visible to use.</p>--> 
+     
+   
+
+    <section id="demos" class="invisible">
+
+
+      <div id="liveView" class="camView">
+        <button id="webcamButton">Enable Webcam</button>
+
+        <audio id='lowSound' src="sounds/LOW__thisusernameis__beep4.wav"></audio>
+        <audio id='midSound' src="sounds/443910__tissman__beep.wav"></audio>
+        <audio id='highSound' src="sounds/534589__artsyangelee__shufflingswishes.wav"></audio>
+        <audio id='sleepingSound' src="sounds/531511__eponn__menu-beep.wav"></audio>
+
+        <video id="webcam" autoplay width="640" height="480"></video>
+      </div>
+    </section>
+  
+   
+    <div  id="BananaSliderDiv">
+      <input type="range" min="0.05" max="0.95" value="0.95" step="0.05" class="slider" id="BananaSlider">
+ Bananas: at least <span id="BananaValue"></span>
+ % to make sound<span id="BananaOutputVar"></span>
+ </div> 
+    
+ <div id="PlantSliderDiv">
+<input type="range" min="0.05" max="0.95" value="0.95" step="0.05" class="slider" id="PlantSlider">
+Plants: at least <span id="PlantValue"></span>
+% to make sound<span id="PlantOutputVar"></span>
+</div> 
+ 
+<div  id="AppleSliderDiv">
+  <input type="range" min="0.05" max="0.95" value="0.95" step="0.05" class="slider" id="AppleSlider">
+Apples: at least <span id="AppleValue"></span>
+% to make sound<span id="AppleOutputVar"></span>
+</div> 
+
+<div  id="OrangeSliderDiv">
+  <input type="range" min="0.05" max="0.95" value="0.95" step="0.05" class="slider" id="OrangeSlider">
+Oranges: at least <span id="OrangeValue"></span>
+% to make sound<span id="OrangeOutputVar"></span>
+</div> 
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="volume-change.js" defer></script>
+  </body>
+</html>
